@@ -1,0 +1,15 @@
+---
+page-layout: full
+listing:
+  id: listing-gallery
+  template: gallery.ejs
+  contents:
+    - www/*.JPG
+  sort-ui: false
+  filter-ui: false
+  categories: false
+---
+
+::: {#listing-gallery}
+:::
+

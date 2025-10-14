@@ -1,0 +1,9 @@
+{
+  "listingMap": {
+    "Pictures.qmd": [
+      "gallery/*.jpg",
+      "www/*.jpg",
+      "www/*.JPG"
+    ]
+  }
+}

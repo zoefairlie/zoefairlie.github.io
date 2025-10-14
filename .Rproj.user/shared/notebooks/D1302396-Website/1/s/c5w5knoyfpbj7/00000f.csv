@@ -1,0 +1,14 @@
+"0","tod_figure = highway_cross_table %>%
+  rbind(visitor_cross_table) %>% rbind(park_cross_table) %>%
+  group_by(road_type) %>%
+  mutate(total_road_cross = sum(cross_dummy)) %>%
+  ungroup() %>%
+  group_by(road_type, tod) %>%
+  summarise(total_crosses = sum(cross_dummy), cross_share = total_crosses/max(total_road_cross)) %>%
+  mutate(road_type = fct_reorder(road_type, total_crosses)) %>%
+  mutate(label= paste0('Count: ', comma(total_crosses),
+                       '\nShare: ', percent(cross_share, accuracy = .1)))
+"
+"2","Error in highway_cross_table %>% rbind(visitor_cross_table) %>% rbind(park_cross_table) %>%  : 
+  could not find function ""%>%""
+"
