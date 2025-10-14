@@ -1,0 +1,24 @@
+page-footer {
+  color: #013220;
+  text-align: center;
+}
+
+image-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 10rem;
+  padding: 5rem;
+}
+
+.image-carousel img {
+  height: 200px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  border-radius: 10px;
+}
+
+{css}
+  .left-align {
+    text-align: left;
+}
