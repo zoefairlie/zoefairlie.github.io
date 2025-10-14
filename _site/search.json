@@ -1,0 +1,136 @@
+[
+  {
+    "objectID": "Website.html",
+    "href": "Website.html",
+    "title": "The Effects of Highways on Guanaco Movement in Patagonia",
+    "section": "",
+    "text": "Animal movement is integral for the transportation of nutrients, plant productivity, and other ecosystem functions. Anthropogenic disturbances such as urban developments and energy production greatly affect animals’ daily movements, migration patterns, and access to necessary resources. As human populations grow, it is important to analyze and identify how barriers, such as roads, will affect animal movements. There is a great deal of variation on wildlife response to roads and ungulates are some of the more affected species. While there has been considerable research about the impacts of roads on ungulates throughout North America and Europe, there has been comparatively little research how roads impact South American wildlife. Here, I examine how roads affect guanaco (Lama guanicoe) movement in Monte León National Park (MLNP). I analyzed guanacos’ crossing behaviors, using GPS data, with three roads in the park. Guanacos were much less likely to cross roadways with higher traffic volumes. My findings have important implications for management and conservation of guanacos, given that roads are a non-permeable barrier to guanaco’s movement. As we continue to create new conservation tracts it is important to assess how current roads will affect guanacos’ habitat usage.",
+    "crumbs": [
+      "Past Projects",
+      "Senior Honors Thesis"
+    ]
+  },
+  {
+    "objectID": "Website.html#quarto",
+    "href": "Website.html#quarto",
+    "title": "Website Creation",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.",
+    "crumbs": [
+      "About Me"
+    ]
+  },
+  {
+    "objectID": "Website.html#running-code",
+    "href": "Website.html#running-code",
+    "title": "Website Creation",
+    "section": "Running Code",
+    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n\nCode\n1 + 1\n\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed).",
+    "crumbs": [
+      "About Me"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "I am quantitative researcher interested in economic and environmental policy, urban planning, and wildlife human interactions.\n\n\n\nMt. Rainier over Seattle from the Kingston-Edmonds ferry.\n\n\nI graduated from UC Berkeley in 2022 with a double major in Environmental Economics & Policy and Conservation & Resource Studies along with a minor in Data Science. I worked with the Middleton Lab on my senior honors thesis - using GPS collar data to study guanacos interactions with roadways in Patagonia.\nSince graduating from Berkeley, I worked for 2 years as an RA at The Brattle Group, a litigation consulting firm.\nCurrently, I work as an Senior RA at ECO Northwest on the Data Analytics team in the Seattle office.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#quarto",
+    "href": "index.html#quarto",
+    "title": "Index",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.",
+    "crumbs": [
+      "About Me"
+    ]
+  },
+  {
+    "objectID": "index.html#running-code",
+    "href": "index.html#running-code",
+    "title": "Index",
+    "section": "Running Code",
+    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n\nCode\n1 + 1\n\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed).",
+    "crumbs": [
+      "About Me"
+    ]
+  },
+  {
+    "objectID": "Resume.html",
+    "href": "Resume.html",
+    "title": "Resume",
+    "section": "",
+    "text": "&lt;p&gt;&lt;a href=\"www/Zoe Fairlie Resume.pdf\" download=\"Zoe Fairlie&#39;s Resume.pdf\" class=\"btn btn-primary\" target=\"_blank\"&gt;&lt;/p&gt;",
+    "crumbs": [
+      "Resume"
+    ]
+  },
+  {
+    "objectID": "Resume.html#quarto",
+    "href": "Resume.html#quarto",
+    "title": "Resume",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.",
+    "crumbs": [
+      "Resume"
+    ]
+  },
+  {
+    "objectID": "Resume.html#running-code",
+    "href": "Resume.html#running-code",
+    "title": "Resume",
+    "section": "Running Code",
+    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n\nCode\n1 + 1\n\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed).",
+    "crumbs": [
+      "Resume"
+    ]
+  },
+  {
+    "objectID": "Pictures.html",
+    "href": "Pictures.html",
+    "title": "Pictures",
+    "section": "",
+    "text": "&lt;div class=\"carousel-item active\"&gt;\n  &lt;img src=\"www/beaverswimming.JPG\" class=\"d-block w-100\" alt=\"Profile Picture 1\"&gt;\n&lt;/div&gt;\n&lt;div class=\"carousel-item\"&gt;\n  &lt;img src=\"www/beaverswimming.JPG\" class=\"d-block w-100\" alt=\"Profile Picture 2\"&gt;\n&lt;/div&gt;\n&lt;div class=\"carousel-item\"&gt;\n  &lt;img src=\"www/beaverswimming.JPG\" class=\"d-block w-100\" alt=\"Profile Picture 3\"&gt;\n&lt;/div&gt;\n\n  Previous    Next",
+    "crumbs": [
+      "Pictures"
+    ]
+  },
+  {
+    "objectID": "Website.html#abstract",
+    "href": "Website.html#abstract",
+    "title": "The Effects of Highways on Guanaco Movement in Patagonia",
+    "section": "",
+    "text": "Animal movement is integral for the transportation of nutrients, plant productivity, and other ecosystem functions. Anthropogenic disturbances such as urban developments and energy production greatly affect animals’ daily movements, migration patterns, and access to necessary resources. As human populations grow, it is important to analyze and identify how barriers, such as roads, will affect animal movements. There is a great deal of variation on wildlife response to roads and ungulates are some of the more affected species. While there has been considerable research about the impacts of roads on ungulates throughout North America and Europe, there has been comparatively little research how roads impact South American wildlife. Here, I examine how roads affect guanaco (Lama guanicoe) movement in Monte León National Park (MLNP). I analyzed guanacos’ crossing behaviors, using GPS data, with three roads in the park. Guanacos were much less likely to cross roadways with higher traffic volumes. My findings have important implications for management and conservation of guanacos, given that roads are a non-permeable barrier to guanaco’s movement. As we continue to create new conservation tracts it is important to assess how current roads will affect guanacos’ habitat usage.",
+    "crumbs": [
+      "Past Projects",
+      "Senior Honors Thesis"
+    ]
+  },
+  {
+    "objectID": "Website.html#introduction",
+    "href": "Website.html#introduction",
+    "title": "The Effects of Highways on Guanaco Movement in Patagonia",
+    "section": "Introduction",
+    "text": "Introduction\nAnimal movement is extremely important for ecosystem nutrient cycling, plant productivity from grazing, and in creating prey sources (Polis 1997). Linear infrastructure, such as roads and fences, causes habitat fragmentation and often disrupts animals’ movement and habitat connectivity (van der Ree 2011). In recent decades, our understanding of the effects of roadways on animal species has increased (van der Ree 2011). For some species, roads lead to altered behaviors and can cause significant mortality due to collisions with vehicles (Rytwinski and Fahrig 2011, 2012). However, for some species, mainly small mammal species, roads can be advantageous, negative, or neutral (Johnson and Collinge 2004).\nPrevious research has shown that large ungulates are more susceptible to road effects due to their large home ranges (Fahrig and Rytwinski 2009). These species are vulnerable to mortality from vehicle collisions and to health issues from toxic pollution located alongside roadways (Jaeger 2005). Species may also suffer from limited access to necessary resources and decreased geneflow between populations separated by a barrier (Laporte 2012). In North America and Europe, road effects on ungulates are well studied because collisions with animals often have large economic costs (Cappa et al., 2019). In the United States research on how energy development is affecting the migration of mule deer found that mule deer are less likely to migrate though areas with surface disturbances (Sawyer et al., 2020). Research has also shown that highways, which are highly trafficked by passenger vehicles and semi-trucks, provide a larger barrier to ungulates because there is a greater vehicular mortality risk than on less trafficked roads (Gagnon et al., 2007).\nFor guanacos (Lama guanicoe), the most widely distributed ungulate in South America, there has been little conclusive research on roadway effects of highly trafficked roads. Guanacos are a species of interest since their population has substantially decreased from 5 million to 600,000 in the past couple hundred years (Baldi et al. 2009). Guanacos are an integral species in the Patagonian Steppe and are extremely important for maintaining ecosystem functions (Pedrana, 2019). Prior studies focused on how roads affect guanaco movement have found relatively mixed results (Cappa 2017, 2019 and Schroeder et al. 2018). A recent study using guanaco dung heap counts found that paved roads negatively affect guanaco presence (Cappa 2019). Another study, which used visual counts to measure guanaco distribution, found no effects of unpaved roads on guanaco’s land usage (Schroeder et al. 2018). Both studies use a proxy variable to find guanaco counts which makes them less able to conclude causal effects from roads. Overall, the previous research shows that we need a more mechanistic understanding of guanaco’s responses to barriers. The objective of this study is to learn more about how guanacos interact with barriers and if their movement is altered when barriers are present. Roadway interactions may be dependent on a variety of factors such as sex, time of day and season. It has been shown that some ungulates, for example male bighorn sheep, are more likely to interact with and cross roadways than their female counterparts due to sexual differences in habitat usage (Bleich 2016). Nocturnal species also have a greater chance of successful road crossings since there are more breaks in traffic at night than during the day (Gagnon 2007). In groups of ungulates, behaviors learned by the “head” or “leader” of the herd are often dispersed to group, including behaviors such as fear of vehicular collisions and traffic (Gagnon 2007). Finally, some ungulate species may be more likely to encounter roads in certain season, like moose in Sweden (Neumann et al. 2011). Guanacos typically don’t have large seasonal movements or migrations but may use their grazing land differently due to vegetation concentrations (Puig 2019).\nHere, I am using GPS data from collared guanacos, providing more precise and accurate data than prior methods have allowed. This is among the first studies on guanacos using GPS tags, which may give more specific location information while reducing human error. I am focusing on Monte León National Park as a case study for guanaco response to a major highway. My two main research questions are: (1) How do highways impact guanacos’ movement? (2) Do guanacos respond differently to roads with varying traffic volumes? Answers to the questions will improve our understanding on if and how the highway represents a barrier to guanaco movement. To study the effects of traffic I will also be observing guanaco’s interactions with the highway along with two other roads that have various traffic levels. I hypothesize that guanacos avoid crossing roads with high traffic. I predict that the probability of crossing the main highway is lower than that of crossing the visitor and park use roads. I also predict that guanacos will be more likely to cross during the day since they are more active then. Regarding season, I predict that guanacos will have different habitat usage, meaning they will be different distances from the highway during the summer and winter for accessing necessary resources. Finally, I predict female guanacos will be less likely to cross the highway since they often have chulengos (baby guanacos) and will not want to endanger their young. To further test this hypothesis and predictions, I examine whether the difference between highway and visitor roads is larger in the daytime when there is more vehicular traffic than at nighttime when there is less traffic. This will show us if the guanacos are not crossing the highway due to the concrete or lack or cover vs traffic, since concrete and lack of cover do not change during the night. This analysis is important for those managing guanaco conservation since the animals may be restricted to certain areas or have impacted behaviors.",
+    "crumbs": [
+      "Past Projects",
+      "Senior Honors Thesis"
+    ]
+  },
+  {
+    "objectID": "Website.html#differences-in-road-crossings-by-road-type",
+    "href": "Website.html#differences-in-road-crossings-by-road-type",
+    "title": "The Effects of Highways on Guanaco Movement in Patagonia",
+    "section": "Differences in Road Crossings by Road Type",
+    "text": "Differences in Road Crossings by Road Type\n\nSexTime of DaySeason\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote: Guanaco data spans from October 2019 through November 2021.",
+    "crumbs": [
+      "Past Projects",
+      "Senior Honors Thesis"
+    ]
+  }
+]

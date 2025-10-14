@@ -1,0 +1,20 @@
+---
+title: "Resume"
+format:
+  html:
+    code-fold: true
+self-contained: true
+---
+
+::: column-page-inset-right
+<!-- Embed the PDF full-width using <iframe> -->
+
+<iframe 
+  src="www/Zoe Fairlie Resume.pdf" 
+  width="100%" 
+  height="1000px" 
+  style="border: none;" 
+  title="Zoe Fairlie Resume">
+
+</iframe>
+:::

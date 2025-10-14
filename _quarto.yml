@@ -1,0 +1,32 @@
+project:
+  type: website
+website:
+  title: "Zoe Fairlie"
+  page-footer: "© 2025 Zoe Fairlie"
+  navbar:
+    background: "#F5FFFA"
+  sidebar:
+    style: "floating"
+    pinned: true
+    collapse-level: 2
+    contents:
+      - href: index.qmd
+        text: "Home"
+      - href: Resume.qmd
+        text: "Resume"
+      - section: "Past Projects"
+        contents:
+          - href: Website.qmd
+            text: "Senior Honors Thesis"
+      - href: Pictures.qmd
+        text: "Pictures"
+
+format:
+  html:
+    theme: lux
+    css: style.css
+    mainfont: Garamond
+    toc: true
+    toc-depth: 1
+    smooth-scroll: true
+    code-fold: true

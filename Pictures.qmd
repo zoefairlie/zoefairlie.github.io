@@ -1,0 +1,18 @@
+---
+title: "Pictures"
+format:
+  html:
+    code-fold: true
+self-contained: true
+---
+
+::: {.carousel-container}
+
+<div class="image-carousel">
+  <img src="www/beaverswimming.JPG" alt="Beaver Swimming, Seattle">
+  <img src="www/beaverlilypad.JPG" alt="Beaver eating a lilypad, Seattle">
+  <img src="www/howlermonkey.JPG" alt="Howler Monkey, Costa Rica">
+  <!-- Add more images as needed -->
+</div>
+
+:::
