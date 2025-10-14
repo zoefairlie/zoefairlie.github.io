@@ -17,3 +17,8 @@ image-carousel {
   scroll-snap-align: start;
   border-radius: 10px;
 }
+
+{css}
+  .left-align {
+    text-align: left;
+}

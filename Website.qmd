@@ -7,7 +7,12 @@ self-contained: true
 
 ---
 
+
 ```{r, message= F, warning=F, echo=F}
+#| message: false
+#| warning: false
+#| echo: false
+
 library(tidyverse)
 library(plotly)
 library(scales)
@@ -74,6 +79,10 @@ I hypothesize that guanaco movement will be impacted by the highway and that gua
 ## Study Area 
 
 ```{r}
+#| message: false
+#| warning: false
+#| echo: false
+
 rutas <- st_read("/Users/zoefairlie/Desktop/Thesis/rutas_all_roads.shp", quiet = TRUE)
 highway <- st_read("/Users/zoefairlie/Desktop/Thesis/highway.shp", quiet = TRUE)
 tourist <- st_read("/Users/zoefairlie/Desktop/Thesis/caminos2.shp", quiet = TRUE)
@@ -91,40 +100,43 @@ road_data = highway %>% mutate(type = 'Highway') %>% select(type) %>%
   summarise(geometry = st_union(geometry))
 
 
-map_tile <- annotation_map_tile(type =
-    paste0('https://services.arcgisonline.com/arcgis/rest/services/NatGeo_World_Map',
-                '/MapServer/tile/${z}/${y}/${x}.jpeg'),
-  zoom = 9,
-  cachedir = "tile_cache",
-  alpha = .7)
+# map_tile <- annotation_map_tile(type =
+#     paste0('https://services.arcgisonline.com/arcgis/rest/services/NatGeo_World_Map',
+#                 '/MapServer/tile/${z}/${y}/${x}.jpeg'),
+#   zoom = 9,
+#   cachedir = "tile_cache",
+#   alpha = .7)
 
 
-ggplot(data = road_data) +
-  map_tile +
-  geom_sf(data = road_data, aes(color = type,size = type), alpha = 0.6, show.legend = "line") +
-    scale_color_manual(name = 'Road Type',
-    values = c('Highway' = '#d95d67', 'Visitor Road' = '#ff9e4d',
-                                'Park Roads' = '#A9866D')) +
-  scale_size_manual(name = 'Road Type',
-                    values = c('Highway' = 2, 'Visitor Road' = 1,
-                                'Park Roads' = .5))+
-  # geom_point(aes(x = Longitude, y = Latitude), shape = 16, alpha = .3) +
-  # scale_color_manual(name = 'id',
-  #                   values = color_pal[1]) +
-  #geom_path(data = test, aes(x = Longitude, y = Latitude)) +
-  # scale_colour_manual(name = "Bird ID",
-  #                     values = rainbow(length(unique(tracksgeo$id))),
-  #                     breaks = unique(tracksgeo$id)) +
-  coord_sf() +
-  theme_void() +
-  theme(legend.position = 'right',
-    panel.grid = element_blank())
+# ggplot(data = road_data) +
+#   map_tile +
+#   geom_sf(data = road_data, aes(color = type,size = type), alpha = 0.6, show.legend = "line") +
+#     scale_color_manual(name = 'Road Type',
+#     values = c('Highway' = '#d95d67', 'Visitor Road' = '#ff9e4d',
+#                                 'Park Roads' = '#A9866D')) +
+#   scale_size_manual(name = 'Road Type',
+#                     values = c('Highway' = 2, 'Visitor Road' = 1,
+#                                 'Park Roads' = .5))+
+#   # geom_point(aes(x = Longitude, y = Latitude), shape = 16, alpha = .3) +
+#   # scale_color_manual(name = 'id',
+#   #                   values = color_pal[1]) +
+#   #geom_path(data = test, aes(x = Longitude, y = Latitude)) +
+#   # scale_colour_manual(name = "Bird ID",
+#   #                     values = rainbow(length(unique(tracksgeo$id))),
+#   #                     breaks = unique(tracksgeo$id)) +
+#   coord_sf() +
+#   theme_void() +
+#   theme(legend.position = 'right',
+#     panel.grid = element_blank())
 
 ```
 
 
 
 ```{r, message= F, warning=F, echo=F}
+#| message: false
+#| warning: false
+#| echo: false
 
 # shape <- st_read("/Users/zoefairlie/Desktop/Thesis/shapefiles_monteleon/catastro_stacruz.shp", quiet = TRUE)
 # shape_2 <- st_read("/Users/zoefairlie/Desktop/Thesis/shapefiles_monteleon/pn_monteleon.shp", quiet = TRUE)
@@ -281,7 +293,7 @@ plot_ly(data = sex_figure ,
        color = ~sex,
        colors = color_pal[2:3],
        type = 'bar',
-       textposition = 'none') %>% 
+       textposition = 'none') %>%
   layout(barmode = 'stack',
          font = list(family = "Garamond", color = 'grey20'),
          title = "",
