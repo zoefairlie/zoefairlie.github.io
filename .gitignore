@@ -1,3 +1,75 @@
+# Quarto
 /.quarto/
 **/*.quarto_ipynb
-.Rproj.user
+_site/
+_book/
+
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rcheck/
+*.Rout
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*~
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Cache directories
+rosm.cache/
+tile_cache/
+cache/
+*_cache/
+*_files/
+
+# Log files
+*.log
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Backup files
+*.bak
+*.backup
+
+# Rendered output that should be generated fresh
+*.html
+*.pdf
+!index.html
+!_site/**
+
+# Data files that are too large or sensitive
+# Uncomment these if you have large data files:
+# *.csv
+# *.xlsx
+# *.shp
+# *.gpkg
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache (if using Python in Quarto)
+__pycache__/
+*.py[cod]
+*$py.class

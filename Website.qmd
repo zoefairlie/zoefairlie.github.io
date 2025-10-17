@@ -3,12 +3,10 @@ title: "The Effects of Highways on Guanaco Movement in Patagonia"
 format:
   html:
     code-fold: true
-self-contained: true
-
+    self-contained: true
 ---
 
-
-```{r, message= F, warning=F, echo=F}
+```{r}
 #| message: false
 #| warning: false
 #| echo: false
@@ -24,6 +22,10 @@ library(prettymapr)
 library(gganimate)
 library(gifski)
 library(av)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(cowplot)
+library(ggspatial)
 
 mapviewOptions(fgb = FALSE)
 
@@ -60,28 +62,6 @@ park_cross_table <- g_park_roads %>% mutate(sex = case_when(female == 1 ~ 'Femal
   select(road_type, cross_dummy, sex, tod, season)
 
 color_pal <- c('#fedc56','#ff9e4d', '#d95d67', '#c5488c') 
-```
-
-## Research Questions:
-
-(1) How do highways impact guanacos’ movement? 
-
-(2) Do guanacos respond differently to roads with varying traffic volumes?
-
-## Hypothesis and Predictions
-
-I hypothesize that guanaco movement will be impacted by the highway and that guanancos will avoid crossing roads with high traffic.
-
-- Guanacos are less likely to cross the highway  
-- Guanacos will be more likely to cross at night since they are more active
-- Female guanacos will be less likely to cross the highway since they often have chulengos (baby guanacos)
-
-## Study Area 
-
-```{r}
-#| message: false
-#| warning: false
-#| echo: false
 
 rutas <- st_read("/Users/zoefairlie/Desktop/Thesis/rutas_all_roads.shp", quiet = TRUE)
 highway <- st_read("/Users/zoefairlie/Desktop/Thesis/highway.shp", quiet = TRUE)
@@ -99,39 +79,129 @@ road_data = highway %>% mutate(type = 'Highway') %>% select(type) %>%
   group_by(type) %>%
   summarise(geometry = st_union(geometry))
 
-
-# map_tile <- annotation_map_tile(type =
-#     paste0('https://services.arcgisonline.com/arcgis/rest/services/NatGeo_World_Map',
-#                 '/MapServer/tile/${z}/${y}/${x}.jpeg'),
-#   zoom = 9,
-#   cachedir = "tile_cache",
-#   alpha = .7)
-
-
-# ggplot(data = road_data) +
-#   map_tile +
-#   geom_sf(data = road_data, aes(color = type,size = type), alpha = 0.6, show.legend = "line") +
-#     scale_color_manual(name = 'Road Type',
-#     values = c('Highway' = '#d95d67', 'Visitor Road' = '#ff9e4d',
-#                                 'Park Roads' = '#A9866D')) +
-#   scale_size_manual(name = 'Road Type',
-#                     values = c('Highway' = 2, 'Visitor Road' = 1,
-#                                 'Park Roads' = .5))+
-#   # geom_point(aes(x = Longitude, y = Latitude), shape = 16, alpha = .3) +
-#   # scale_color_manual(name = 'id',
-#   #                   values = color_pal[1]) +
-#   #geom_path(data = test, aes(x = Longitude, y = Latitude)) +
-#   # scale_colour_manual(name = "Bird ID",
-#   #                     values = rainbow(length(unique(tracksgeo$id))),
-#   #                     breaks = unique(tracksgeo$id)) +
-#   coord_sf() +
-#   theme_void() +
-#   theme(legend.position = 'right',
-#     panel.grid = element_blank())
+park_outline <- st_read("/Users/zoefairlie/Desktop/Thesis/shapefiles_monteleon/pn_monteleon.shp") %>%
+  st_transform(st_crs(highway))
 
 ```
 
+## Research Questions:
 
+(1) How do highways impact guanacos’ movement? 
+
+(2) Do guanacos respond differently to roads with varying traffic volumes?
+
+
+
+
+
+## Study Area 
+
+```{r, message= F, warning=F, echo=F}
+
+sa <- ne_countries(continent = "South America", returnclass = "sf")
+
+monte_leon_center <- st_point(c(-68.898, -50.266)) %>%
+  st_sfc(crs = 4326)
+
+# Small bounding box (~25 km each direction)
+buffer_deg <- 0.25
+monte_leon_bbox <- st_bbox(st_buffer(monte_leon_center, dist = buffer_deg))
+
+main_map <- ggplot() +
+  geom_sf(data = sa, color = "black", fill = "white", linewidth = 0.4) +
+  geom_sf(data = monte_leon_center, color = "grey25",fill = color_pal[1], size = 5, shape = 21 ) +
+  theme_void() +
+  annotation_north_arrow(height = unit(1, 'cm'), width = unit(1, 'cm'), style = north_arrow_fancy_orienteering, location = 'tr')+
+  theme(panel.background = element_rect(fill = "white", color = NA))
+
+map_tile <- annotation_map_tile(type =
+    paste0('https://services.arcgisonline.com/arcgis/rest/services/NatGeo_World_Map',
+                '/MapServer/tile/${z}/${y}/${x}.jpeg'),
+  zoom = 9,
+  cachedir = "tile_cache",
+  alpha = 1)
+
+# Get the bounding box of the visitor road
+visitor_bbox <- sf::st_bbox(park_outline)
+
+# Optionally, add a small buffer so the road isn’t right at the edge
+buffer <- 0.1  # degrees; adjust as needed
+visitor_bbox[1] <- visitor_bbox[1] - buffer  # xmin
+visitor_bbox[2] <- visitor_bbox[2] - buffer  # ymin
+visitor_bbox[3] <- visitor_bbox[3] + buffer  # xmax
+visitor_bbox[4] <- visitor_bbox[4] + buffer  # ymax
+
+# Then use that in coord_sf()
+mymap <- ggplot(data = road_data) +
+  map_tile +
+  geom_sf(data = park_outline, aes(fill = 'Park Boundary'),color = color_pal[1], size = .7, alpha = .3) +
+  scale_fill_manual(name = element_blank(), values = c('Park Boundary' = color_pal[1]),
+                    guide = guide_legend(override.aes = list(keyheight = unit(.2, 'cm'),
+                                                             linetype = "blank", shape = NA))) +
+  geom_sf(data = road_data, aes(color = type, size = type),
+          alpha = 0.8, show.legend = "line") +
+  scale_color_manual(
+    name = element_blank(),
+    values = c('Highway' = '#d95d67',
+               'Visitor Road' = '#ff9e4d',
+               'Park Roads' = '#A9866D',
+               'Park Boundary' = NA),
+               guide = guide_legend(override.aes = list(linewidth = c(2,1,.5)))
+  ) +
+  scale_size_manual(
+    name =  element_blank(),
+    values = c('Highway' = 2,
+               'Visitor Road' = 1,
+               'Park Roads' = 0.5,
+               "Park Boundary" = NA)
+  ) +
+  coord_sf(
+    xlim = c(visitor_bbox["xmin"], visitor_bbox["xmax"]),
+    ylim = c(visitor_bbox["ymin"], visitor_bbox["ymax"]),
+    expand = FALSE
+  ) +
+  theme_void() +
+  annotation_scale(style = 'ticks', location = 'bl', unit_category = 'imperial') +
+  theme(
+    legend.position = c(.7, .25),
+    legend.box.background = element_rect(fill = alpha("white", .8),
+                                         color = 'grey35',
+                                         linewidth = .5),
+    legend.box.margin = margin(5,5,5,5),
+    panel.grid = element_blank(),
+    plot.margin = margin(1, 1, 1, 1, unit = "pt"),
+    plot.background = element_rect(color = 'grey35', fill = NA, linewidth = 1)
+  )
+
+final_plot <- ggdraw() +
+  draw_plot(main_map) +
+  draw_plot(mymap, x = 0.5, y = 0.25, width = .6, height = 0.6) +
+  draw_line(
+    x = c(0.72, 0.42),  # tweak these for your liking
+    y = c(0.25, 0.12),
+    color = "grey35",
+    size = 0.6
+  ) + 
+  draw_line(
+    x = c(0.58, 0.42),  # tweak these for your liking
+    y = c(0.5, 0.12),
+    color = "grey35",
+    size = 0.6
+  )
+
+final_plot
+
+```
+
+## Hypothesis and Predictions
+
+I hypothesize that guanaco movement will be impacted by the highway and that guanancos will avoid crossing roads with high traffic.
+
+- Guanacos are less likely to cross the highway  
+- Guanacos will be more likely to cross at night since they are more active
+- Female guanacos will be less likely to cross the highway since they often have chulengos (baby guanacos)
+
+## Example Guanaco Movement
 
 ```{r, message= F, warning=F, echo=F}
 #| message: false
@@ -264,6 +334,8 @@ road_data = highway %>% mutate(type = 'Highway') %>% select(type) %>%
 <video width="720" height="480" controls>
   <source src="www/guanaco_animate.mp4" type="video/mp4">
 </video>
+
+MLG06: Female, 113 kg
 
 ## Differences in Road Crossings by Road Type
 :::panel-tabset
