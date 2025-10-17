@@ -1,41 +1,78 @@
-#!/bin/bash#!/bin/bash#!/bin/bash
+#!/bin/bash#!/bin/bash#!/bin/bash#!/bin/bash
 
 
 
-# Deploy script to overwrite gh-pages branch with main branch content
+# Safe deploy script - builds site and copies to gh-pages without affecting main branch
 
 echo "🔄 Rendering Quarto website..."
 
+quarto render# Deploy script to overwrite gh-pages branch with main branch content
+
+
+
+echo "📁 Ensuring we're on main branch..."echo "🔄 Rendering Quarto website..."
+
+git checkout main
+
 quarto render# Deploy script to overwrite gh-pages branch with main branch content# Simple deploy script for GitHub Pages from main branch
 
-
-
-echo "📁 Saving current changes to main branch..."echo "🔄 Rendering Quarto website..."echo "🔄 Rendering Quarto website..."
+echo "💾 Saving any uncommitted changes..."
 
 git add .
 
-git commit -m "Pre-deploy save - $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"quarto renderquarto render
+git commit -m "Pre-deploy save - $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
 
-git push origin main
-
-
+echo "📁 Saving current changes to main branch..."echo "🔄 Rendering Quarto website..."echo "🔄 Rendering Quarto website..."
 
 echo "🔄 Switching to gh-pages branch..."
 
-git checkout gh-pagesecho "📁 Saving current changes to main branch..."echo "� Copying site files to root directory..."
+git checkout gh-pages || git checkout -b gh-pagesgit add .
 
 
 
-echo "🗑️ Clearing gh-pages branch..."git add .# Copy built files from _site to root, excluding source files
+echo "🗑️ Clearing gh-pages content (keeping .git)..."git commit -m "Pre-deploy save - $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"quarto renderquarto render
+
+find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} +
+
+git push origin main
+
+echo "📥 Copying built site from main branch..."
+
+git checkout main -- _site
+
+cp -r _site/* .
+
+rm -rf _siteecho "🔄 Switching to gh-pages branch..."
+
+
+
+echo "📄 Adding .nojekyll file..."git checkout gh-pagesecho "📁 Saving current changes to main branch..."echo "� Copying site files to root directory..."
+
+touch .nojekyll
+
+
+
+echo "✅ Committing to gh-pages..."
+
+git add .echo "🗑️ Clearing gh-pages branch..."git add .# Copy built files from _site to root, excluding source files
+
+git commit -m "Deploy website - $(date '+%Y-%m-%d %H:%M:%S')"
 
 git rm -rf .
 
-git commit -m "Pre-deploy save - $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"cp _site/*.html .
+echo "🌐 Pushing to GitHub Pages..."
 
-echo "📥 Copying everything from main branch..."
+git push origin gh-pagesgit commit -m "Pre-deploy save - $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"cp _site/*.html .
+
+
+
+echo "🔄 Returning to main branch..."echo "📥 Copying everything from main branch..."
+
+git checkout main
 
 git checkout main -- .git push origin maincp _site/*.json .
 
+echo "🎉 Deployment complete! Your website should be updated at https://zoefairlie.github.io"
 
 
 echo "✅ Adding and committing all files to gh-pages..."cp _site/*.css .
