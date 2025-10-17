@@ -1,0 +1,30 @@
+---
+title: "SPUR Grant Research Project"
+format:
+  html:
+    code-fold: true
+    self-contained: true
+---
+
+```{r}
+#| message: false
+#| warning: false
+#| echo: false
+
+# Load required libraries
+library(tidyverse)
+library(ggplot2)
+
+```
+
+::: column-page-inset-right
+<!-- Embed the PDF full-width using <iframe> -->
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+  <iframe 
+    src="www/Zoe Fairlie SPUR Presentation.pdf" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
+    title="SPUR Grant Research Project">
+  </iframe>
+</div>
+:::
