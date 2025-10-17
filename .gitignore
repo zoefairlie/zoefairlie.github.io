@@ -53,10 +53,11 @@ cache/
 *.bak
 *.backup
 
-# Rendered output that should be generated fresh
-*.html
+# Rendered output that should be generated fresh (allowing HTML for main branch deployment)
+# *.html - commented out to allow deployment from main branch
 *.pdf
-!index.html
+# Allowing all HTML files for GitHub Pages deployment from main branch
+!*.html
 !_site/**
 
 # Data files that are too large or sensitive
