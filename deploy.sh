@@ -1,38 +1,82 @@
-#!/bin/bash
+#!/bin/bash#!/bin/bash#!/bin/bash
 
-# Script to deploy Quarto website to gh-pages branch
-# Usage: ./deploy.sh
+
+
+# Deploy script to overwrite gh-pages branch with main branch content
 
 echo "🔄 Rendering Quarto website..."
-quarto render
 
-echo "📦 Copying site files to temporary location..."
-cp -r _site /tmp/quarto-site-$(date +%s)
-TEMP_SITE="/tmp/quarto-site-$(date +%s)"
-cp -r _site "$TEMP_SITE"
+quarto render# Deploy script to overwrite gh-pages branch with main branch content# Simple deploy script for GitHub Pages from main branch
 
-echo "📦 Switching to gh-pages branch..."
-git checkout gh-pages
 
-echo "🧹 Cleaning gh-pages branch..."
-git rm -rf .
-rm -rf .DS_Store .Rhistory .Rproj.user .quarto rosm.cache tile_cache
 
-echo "📂 Copying site files from temporary location..."
-cp -r "$TEMP_SITE"/* .
-cp "$TEMP_SITE"/.nojekyll . 2>/dev/null || true
+echo "📁 Saving current changes to main branch..."echo "🔄 Rendering Quarto website..."echo "🔄 Rendering Quarto website..."
 
-echo "🚀 Cleaning up temporary files..."
-rm -rf "$TEMP_SITE"
-
-echo "✅ Adding and committing changes..."
 git add .
-git commit -m "Deploy website - $(date '+%Y-%m-%d %H:%M:%S')"
 
-echo "🌐 Pushing to GitHub..."
+git commit -m "Pre-deploy save - $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"quarto renderquarto render
+
+git push origin main
+
+
+
+echo "🔄 Switching to gh-pages branch..."
+
+git checkout gh-pagesecho "📁 Saving current changes to main branch..."echo "� Copying site files to root directory..."
+
+
+
+echo "🗑️ Clearing gh-pages branch..."git add .# Copy built files from _site to root, excluding source files
+
+git rm -rf .
+
+git commit -m "Pre-deploy save - $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"cp _site/*.html .
+
+echo "📥 Copying everything from main branch..."
+
+git checkout main -- .git push origin maincp _site/*.json .
+
+
+
+echo "✅ Adding and committing all files to gh-pages..."cp _site/*.css .
+
+git add .
+
+git commit -m "Deploy website - $(date '+%Y-%m-%d %H:%M:%S')"echo "🔄 Switching to gh-pages branch..."cp -r _site/site_libs .
+
+
+
+echo "🌐 Pushing to GitHub Pages..."git checkout gh-pagescp _site/.nojekyll .
+
 git push origin gh-pages
 
-echo "🔙 Returning to main branch..."
+
+
+echo "🔄 Returning to main branch..."
+
+git checkout mainecho "🗑️ Clearing gh-pages branch..."echo "✅ Adding and committing changes..."
+
+
+
+echo "🎉 Deployment complete! Your website should be updated at https://zoefairlie.github.io"git rm -rf .git add *.html *.json *.css site_libs/ .nojekyll
+
+git commit -m "Deploy website - $(date '+%Y-%m-%d %H:%M:%S')"
+
+echo "📥 Copying everything from main branch..."
+
+git checkout main -- .echo "🌐 Pushing to GitHub..."
+
+git push origin main
+
+echo "✅ Adding and committing all files to gh-pages..."
+
+git add .echo "🎉 Deployment complete! Your website should be updated at https://zoefairlie.github.io"
+git commit -m "Deploy website - $(date '+%Y-%m-%d %H:%M:%S')"
+
+echo "🌐 Pushing to GitHub Pages..."
+git push origin gh-pages
+
+echo "🔄 Returning to main branch..."
 git checkout main
 
 echo "🎉 Deployment complete! Your website should be updated at https://zoefairlie.github.io"
