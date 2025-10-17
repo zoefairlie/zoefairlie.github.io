@@ -1,0 +1,88 @@
+[
+  {
+    "objectID": "Pictures.html",
+    "href": "Pictures.html",
+    "title": "Zoe Fairlie",
+    "section": "",
+    "text": "No matching items",
+    "crumbs": [
+      "Pictures"
+    ]
+  },
+  {
+    "objectID": "Website.html",
+    "href": "Website.html",
+    "title": "The Effects of Highways on Guanaco Movement in Patagonia",
+    "section": "",
+    "text": "Reading layer `pn_monteleon' from data source \n  `/Users/zoefairlie/Desktop/Thesis/shapefiles_monteleon/pn_monteleon.shp' \n  using driver `ESRI Shapefile'\nSimple feature collection with 1 feature and 1 field\nGeometry type: POLYGON\nDimension:     XY\nBounding box:  xmin: 484907.2 ymin: 4408137 xmax: 524220.4 ymax: 4438420\nProjected CRS: WGS 84 / UTM zone 19S",
+    "crumbs": [
+      "Past Projects",
+      "Senior Honors Thesis"
+    ]
+  },
+  {
+    "objectID": "Website.html#research-questions",
+    "href": "Website.html#research-questions",
+    "title": "The Effects of Highways on Guanaco Movement in Patagonia",
+    "section": "Research Questions:",
+    "text": "Research Questions:\n\nHow do highways impact guanacos’ movement?\nDo guanacos respond differently to roads with varying traffic volumes?",
+    "crumbs": [
+      "Past Projects",
+      "Senior Honors Thesis"
+    ]
+  },
+  {
+    "objectID": "Website.html#study-area",
+    "href": "Website.html#study-area",
+    "title": "The Effects of Highways on Guanaco Movement in Patagonia",
+    "section": "Study Area",
+    "text": "Study Area",
+    "crumbs": [
+      "Past Projects",
+      "Senior Honors Thesis"
+    ]
+  },
+  {
+    "objectID": "Website.html#hypothesis-and-predictions",
+    "href": "Website.html#hypothesis-and-predictions",
+    "title": "The Effects of Highways on Guanaco Movement in Patagonia",
+    "section": "Hypothesis and Predictions",
+    "text": "Hypothesis and Predictions\nI hypothesize that guanaco movement will be impacted by the highway and that guanancos will avoid crossing roads with high traffic.\n\nGuanacos are less likely to cross the highway\n\nGuanacos will be more likely to cross at night since they are more active\nFemale guanacos will be less likely to cross the highway since they often have chulengos (baby guanacos)",
+    "crumbs": [
+      "Past Projects",
+      "Senior Honors Thesis"
+    ]
+  },
+  {
+    "objectID": "Website.html#example-guanaco-movement",
+    "href": "Website.html#example-guanaco-movement",
+    "title": "The Effects of Highways on Guanaco Movement in Patagonia",
+    "section": "Example Guanaco Movement",
+    "text": "Example Guanaco Movement\n\n\n\nMLG06: Female, 113 kg",
+    "crumbs": [
+      "Past Projects",
+      "Senior Honors Thesis"
+    ]
+  },
+  {
+    "objectID": "Website.html#differences-in-road-crossings-by-road-type",
+    "href": "Website.html#differences-in-road-crossings-by-road-type",
+    "title": "The Effects of Highways on Guanaco Movement in Patagonia",
+    "section": "Differences in Road Crossings by Road Type",
+    "text": "Differences in Road Crossings by Road Type\n\nSexTime of DaySeason\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote: Guanaco data spans from October 2019 through November 2021.",
+    "crumbs": [
+      "Past Projects",
+      "Senior Honors Thesis"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "I am quantitative researcher interested in economic and environmental policy, urban planning, and wildlife human interactions.\n\n\n\n\nMt. Rainier over Seattle from the Kingston-Edmonds ferry.\n\n\n\nI graduated from UC Berkeley in 2022 with a double major in Environmental Economics & Policy and Conservation & Resource Studies along with a minor in Data Science. I worked with the Middleton Lab on my senior honors thesis - using GPS collar data to study guanacos interactions with roadways in Patagonia.\nSince graduating from Berkeley, I worked for 2 years as an RA at The Brattle Group, a litigation consulting firm.\nCurrently, I work as an Senior RA at ECO Northwest on the Data Analytics team in the Seattle office.",
+    "crumbs": [
+      "Home"
+    ]
+  }
+]

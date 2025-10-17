@@ -1,7 +1,6 @@
 # Quarto
 /.quarto/
 **/*.quarto_ipynb
-_site/
 _book/
 
 # R
