@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir:
+  output-dir: "docs"
 website:
   title: "Zoe Fairlie"
   page-footer: "© 2025 Zoe Fairlie"
