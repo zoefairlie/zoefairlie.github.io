@@ -1,0 +1,39 @@
+---
+title: "ECO Northwest"
+format:
+  html:
+    code-fold: true
+self-contained: true
+---
+
+
+## Housing Production Workforce Assessment
+
+::: column-page-inset-right
+<!-- Embed the PDF full-width using <iframe> -->
+
+<iframe 
+  src="https://www.oregon.gov/workforceboard/data-and-reports/Documents/OR_Housing_Production_Workforce%20Assessment.pdf" 
+  width="100%" 
+  height="1000px" 
+  style="border: none;" 
+  title="SPUR Presentation">
+
+</iframe>
+:::
+
+
+## Forestry Operations and Managemetn Workforce Study
+
+::: column-page-inset-right
+<!-- Embed the PDF full-width using <iframe> -->
+
+<iframe 
+  src="https://www.oregon.gov/workforceboard/data-and-reports/Documents/Forestry%20Operations%20%26%20Management%20Workforce%20Study.pdf" 
+  width="100%" 
+  height="1000px" 
+  style="border: none;" 
+  title="SPUR Presentation">
+
+</iframe>
+:::

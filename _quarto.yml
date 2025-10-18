@@ -1,6 +1,8 @@
 project:
   type: website
-  output-dir: .
+  output-dir:
+  resources:
+    - "www/"
 website:
   title: "Zoe Fairlie"
   page-footer: "© 2025 Zoe Fairlie"
@@ -17,13 +19,14 @@ website:
         text: "Resume"
       - section: "Past Projects"
         contents:
+          - href: eco_work.qmd
+            text: "Work at ECO Northwest"
           - href: Website.qmd
             text: "Senior Honors Thesis"
           - href: birdproject.qmd
             text: "SPUR Grant Research Project"
       - href: Pictures.qmd
         text: "Pictures"
-
 format:
   html:
     theme: lux

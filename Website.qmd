@@ -95,6 +95,7 @@ To analyze the effects of traffic, I compared guanaco interactions with the main
 
 ## Study Area
 Monte León National Park (MLNP)
+
 - 61,000 ha along 30 km of coastline in the Patagonian Steppe  
 - Bounded by Route 3 and the Atlantic Ocean 
 
