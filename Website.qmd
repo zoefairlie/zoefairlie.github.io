@@ -27,6 +27,7 @@ library(rnaturalearthdata)
 library(cowplot)
 library(ggspatial)
 library(magick)
+library(kableExtra)
 
 mapviewOptions(fgb = FALSE)
 
@@ -84,14 +85,31 @@ park_outline <- st_read("/Users/zoefairlie/Desktop/Thesis/shapefiles_monteleon/p
   st_transform(st_crs(highway))
 
 ```
+## Introduction
 
-## Research Questions:
+Habitat connectivity is vital for ungulates, enabling access to key resources and maintaining gene flow among populations.
+Expanding linear infastructure such as roads fragment their habitats and restrict movement.
+Guanacos, South America’s most widespread native ungulate, have declined drastically and remain understudied regarding roadway impacts in the Patagonian steppe. 
+This study uses GPS data from Monte León National Park, Argentina, to examine how guanaco movement responds to a major highway.
 
-(1) How do highways impact guanacos' movement? 
 
-(2) Do guanacos respond differently to roads with varying traffic volumes?
+## Research Questions
+
+How does highway traffic constrain guanaco movement? 
+Do guanacos respond differently to roads with varying traffic volumes?
 
 To analyze the effects of traffic, I compared guanaco interactions with the main highway as well as two additional roads that differ in traffic intensity: a visitor road that connects the highway to the park and smaller, unpaved roads used by park staff.
+
+## Hypotheses and Predictions
+
+I hypothesize that guanaco movement will be impacted by the highway and that guanancos will avoid crossing roads with high traffic.
+
+- In general guanacos will avoid crossing the highway.
+- Guanacos will be more likely to cross the highway at night because there is less traffic and guanacos may exhibit diel shifts in proximity to humans.
+- Female guanacos will be less likely to cross the highway because they have chulengos (baby guanacos).
+
+
+To further test these hypotheses and predictions, I examined whether differences in guanaco behavior between the highway and visitor roads are greater during the daytime, when vehicular traffic is higher, than at night, when traffic is lower.
 
 ## Study Area
 Monte León National Park (MLNP)
@@ -100,8 +118,11 @@ Monte León National Park (MLNP)
 - Bounded by Route 3 and the Atlantic Ocean 
 
 Highway: two lane road that extends from Buenos Aires to the tip of Argentina, making it a major transportation route for the country with high volumes of traffic.
-Visitors Road: two lane road that takes tourists from the highway to the ocean through MLNP
-Park Use Roads: a small dirt road system only used by park officials  
+
+Visitors Road: two lane road that takes tourists from the highway to the ocean through MLNP.
+
+Park Use Roads: a small dirt road system only used by park officials.
+
 
 ```{r, message= F, warning=F, echo=F}
 
@@ -200,18 +221,8 @@ final_plot
 
 ```
 
-## Hypotheses and Predictions
 
-I hypothesize that guanaco movement will be impacted by the highway and that guanancos will avoid crossing roads with high traffic.
-
-- Guanacos are less likely to cross the highway  
-- Guanacos will be more likely to cross at night since they are more active
-- Female guanacos will be less likely to cross the highway since they often have chulengos (baby guanacos)
-
-
-To further test this hypothesis and its predictions, I examined whether differences in guanaco behavior between the highway and visitor roads are greater during the daytime, when vehicular traffic is higher, than at night, when traffic is lower.
-
-## Example Guanaco Movement
+### Example Guanaco Movement
 
 ```{r, message= F, warning=F, echo=F}
 #| message: false
@@ -341,17 +352,29 @@ To further test this hypothesis and its predictions, I examined whether differen
 
 ```
 
-<video width="720" height="480" controls>
-  <source src="www/guanaco_animate.mp4" type="video/mp4">
-</video>
+## Model 
+To analyze guanacos’ interaction with the barrier I used Barrier Behavior Analysis (BaBA) which is a spatial analysis package that classifies barrier interaction types. 
 
-MLG06: Female, 113 kg
+- I assumed that if the guanaco is using the habitat equally there will be a 50% chance it crosses an arbitrary barrier. 
 
-To analyze guanacos’ interaction with the barrier we used Barrier Behavior Analysis (BaBA) which is a spatial analysis package that classifies barrier interaction types and collects barrier crossing data. 
+$H_0: \beta_{highway} = \beta_{visitor} = \beta_{park\ roads} = 0.5$
 
-I found that 29.3% of highway crossing events were by male guanacos (p < 0.05), indicating that females were more likely to cross. Additionally, 66.4% of highway crossings occurred during the summer months (p < 0.05), and 64.7% occurred during daytime. These results contrast with my initial prediction that female guanacos would be less likely to cross the highway. One possible explanation is that females may travel in larger groups, increasing their likelihood of crossing, whereas males are more solitary and potentially less bold. Further investigation is needed to better understand these behavioral patterns.
+$H_A: \beta_{highway} < \beta_{visitor} \text{ and } \beta_{highway} < \beta_{park\ roads}$
 
-## Differences in Road Crossings by Road Type
+## Results
+### Exploratory Findings
+
+- 66.4% of highway crossings occurred during the summer months (p < 0.05)
+
+- 64.7% of highway crossings occurred during daytime.
+ 
+- 29.3% of highway crossing events were by male guanacos (p < 0.05), indicating that females were more likely to cross. 
+
+ These results contrast with my initial prediction that female guanacos would be less likely to cross the highway. 
+ One possible explanation is that females may travel in larger groups, increasing their likelihood of crossing, whereas males are more solitary and potentially less bold. 
+ Further investigation is needed to better understand these behavioral patterns.
+
+### Figure 1: Differences in Road Crossings
 :::panel-tabset
 
 ### Sex
@@ -471,13 +494,51 @@ plot_ly(data = season_figure ,
 :::
 
 ::: {.column-marign}
-Note: Guanaco data spans from October 2019 through November 2021.
+Note: Guanaco data collection occurred October 2019 through November 2021.
 :::
 
+### Average Movement
 
-To test whether guanacos avoid crossing the highway due to traffic, we created two interaction variables combining the highway and visitor roads with a daytime dummy variable (0 = night, 1 = day). The coefficients on these interaction terms capture the additional impact of crossing busy roads, using daytime as a proxy for higher traffic. When these interactions are included, we find that guanacos are 7.4% ± 1.6% (p < 0.05) and 7.7% ± 1.7% (p < 0.05; see Appendix Table 2) less likely to cross the highway and visitor road, respectively, beyond the baseline likelihood of crossing during the day. This reduction is likely attributable to traffic-related avoidance or increased perceived risk. Notably, this model is the most explanatory, as it has the lowest AIC value among those tested.
+<video width="720" height="480" controls>
+  <source src="www/guanaco_animate.mp4" type="video/mp4">
+</video>
+
+MLG06: Average Movement, Female
+
+### Trapped
+
+<video width="720" height="480" controls>
+  <source src="www/guanaco_animate_trapped.mp4" type="video/mp4">
+</video>
+
+MLG08: Trapped, Female
+
+10 of the 4668 interactions were classified as “Quick Cross”, meaning that only 10 of the 116 highway crosses took place within 2 hours of being 80 meters
+from the highway. 
+
+### Guanaco Behavioral Responses
+
+```{r, message= F, warning=F, echo=F}
+summary_highway <- read_csv("/Users/zoefairlie/Desktop/Thesis/highway_interaction_table.csv") %>%
+  mutate(`Number of Interactions` = comma(`Number of Interactions`, accuracy = 1))
+
+kable(summary_highway, 
+      caption = "Summary Statistics with Highway as Barrier",
+      row.names = FALSE, 
+      align = c("l", "r","r","r")) %>%
+  kable_styling(full_width = FALSE)
+```
+
 
 ## Model Results
+
+To test whether guanacos avoid crossing the highway due to traffic, I created two interaction variables combining the highway and visitor roads with a daytime binary variable. 
+The coefficients on these interaction terms capture the additional impact of crossing busy roads, using daytime as a proxy for higher traffic. 
+
+When these interactions are included, we find that guanacos are 7.4% ± 1.6% (p < 0.05) and 7.7% ± 1.7% (p < 0.05; see Appendix Table 2) less likely to cross the highway and visitor road, respectively, beyond the baseline likelihood of crossing during the day. 
+This reduction is likely attributable to traffic-related avoidance or increased perceived risk.
+ Notably, this model is the most explanatory, as it has the lowest AIC value among those tested.
+
 
 ### Model Comparison (AIC Values)
 
@@ -497,8 +558,7 @@ img_info <- image_info(aic_img)
 height <- img_info$height
 width <- img_info$width
 
-# Crop off the top 15% of the image (adjust percentage as needed)
-crop_height <- round(height * 0.2)
+crop_height <- round(height * 0.1)
 cropped_img <- image_crop(aic_img, paste0(width, "x", height - crop_height, "+0+", crop_height))
 
 # Save the cropped image temporarily
@@ -508,10 +568,15 @@ image_write(cropped_img, "www/aic_cropped.jpg")
 knitr::include_graphics("www/aic_cropped.jpg")
 ```
 
+My results indicated that paved roads significantly affect guanaco movement, with vehicular traffic being a major contributing factor.
+ However, other factors may also influence highway avoidance, including differences in vegetation and habitat on either side of the road, as well as fear of poaching, since private land borders the highway. 
+Future research should investigate these alternative hypotheses and the potential role of fencing.
+
+
 ### Regression Table
 
-![](www/regtable.jpg){width=75% fig-align="center"}
+<iframe src="www/regint.html" width="100%" height="670px" style="border: none;" title="Regression Table"></iframe>
 
-My results indicated that paved roads significantly affect guanaco movement, with vehicular traffic being a major contributing factor. However, other factors may also influence highway avoidance, including differences in vegetation and habitat on either side of the road, as well as fear of poaching, since private land borders the highway. 
-Future research should investigate these alternative hypotheses and the potential role of fencing.
-From a conservation perspective, these findings highlight that roadways can fragment guanaco habitat. When planning new national parks or conservation areas, park managers should consider connectivity across roads. Strategies such as wildlife crossing structures could help mitigate the negative effects of traffic and maintain mobility for guanaco populations.
+
+From a conservation perspective, these findings highlight that roadways can fragment guanaco habitat. When planning new national parks or conservation areas, park managers should consider connectivity across roads. 
+Strategies such as wildlife crossing structures could help mitigate the negative effects of traffic and maintain mobility for guanaco populations.

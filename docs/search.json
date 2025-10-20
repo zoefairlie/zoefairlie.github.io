@@ -25,7 +25,18 @@
     "href": "Website.html",
     "title": "The Effects of Highways on Guanaco Movement in Patagonia",
     "section": "",
-    "text": "How do highways impact guanacos’ movement?\nDo guanacos respond differently to roads with varying traffic volumes?\n\nTo analyze the effects of traffic, I compared guanaco interactions with the main highway as well as two additional roads that differ in traffic intensity: a visitor road that connects the highway to the park and smaller, unpaved roads used by park staff.",
+    "text": "Habitat connectivity is vital for ungulates, enabling access to key resources and maintaining gene flow among populations. Expanding linear infastructure such as roads fragment their habitats and restrict movement. Guanacos, South America’s most widespread native ungulate, have declined drastically and remain understudied regarding roadway impacts in the Patagonian steppe. This study uses GPS data from Monte León National Park, Argentina, to examine how guanaco movement responds to a major highway.",
+    "crumbs": [
+      "Past Projects",
+      "Senior Honors Thesis"
+    ]
+  },
+  {
+    "objectID": "Website.html#introduction",
+    "href": "Website.html#introduction",
+    "title": "The Effects of Highways on Guanaco Movement in Patagonia",
+    "section": "",
+    "text": "Habitat connectivity is vital for ungulates, enabling access to key resources and maintaining gene flow among populations. Expanding linear infastructure such as roads fragment their habitats and restrict movement. Guanacos, South America’s most widespread native ungulate, have declined drastically and remain understudied regarding roadway impacts in the Patagonian steppe. This study uses GPS data from Monte León National Park, Argentina, to examine how guanaco movement responds to a major highway.",
     "crumbs": [
       "Past Projects",
       "Senior Honors Thesis"
@@ -35,19 +46,8 @@
     "objectID": "Website.html#research-questions",
     "href": "Website.html#research-questions",
     "title": "The Effects of Highways on Guanaco Movement in Patagonia",
-    "section": "",
-    "text": "How do highways impact guanacos’ movement?\nDo guanacos respond differently to roads with varying traffic volumes?\n\nTo analyze the effects of traffic, I compared guanaco interactions with the main highway as well as two additional roads that differ in traffic intensity: a visitor road that connects the highway to the park and smaller, unpaved roads used by park staff.",
-    "crumbs": [
-      "Past Projects",
-      "Senior Honors Thesis"
-    ]
-  },
-  {
-    "objectID": "Website.html#study-area",
-    "href": "Website.html#study-area",
-    "title": "The Effects of Highways on Guanaco Movement in Patagonia",
-    "section": "Study Area",
-    "text": "Study Area\nMonte León National Park (MLNP)\n\n61,000 ha along 30 km of coastline in the Patagonian Steppe\n\nBounded by Route 3 and the Atlantic Ocean\n\nHighway: two lane road that extends from Buenos Aires to the tip of Argentina, making it a major transportation route for the country with high volumes of traffic. Visitors Road: two lane road that takes tourists from the highway to the ocean through MLNP Park Use Roads: a small dirt road system only used by park officials",
+    "section": "Research Questions",
+    "text": "Research Questions\nHow does highway traffic constrain guanaco movement? Do guanacos respond differently to roads with varying traffic volumes?\nTo analyze the effects of traffic, I compared guanaco interactions with the main highway as well as two additional roads that differ in traffic intensity: a visitor road that connects the highway to the park and smaller, unpaved roads used by park staff.",
     "crumbs": [
       "Past Projects",
       "Senior Honors Thesis"
@@ -58,29 +58,40 @@
     "href": "Website.html#hypotheses-and-predictions",
     "title": "The Effects of Highways on Guanaco Movement in Patagonia",
     "section": "Hypotheses and Predictions",
-    "text": "Hypotheses and Predictions\nI hypothesize that guanaco movement will be impacted by the highway and that guanancos will avoid crossing roads with high traffic.\n\nGuanacos are less likely to cross the highway\n\nGuanacos will be more likely to cross at night since they are more active\nFemale guanacos will be less likely to cross the highway since they often have chulengos (baby guanacos)\n\nTo further test this hypothesis and its predictions, I examined whether differences in guanaco behavior between the highway and visitor roads are greater during the daytime, when vehicular traffic is higher, than at night, when traffic is lower.",
+    "text": "Hypotheses and Predictions\nI hypothesize that guanaco movement will be impacted by the highway and that guanancos will avoid crossing roads with high traffic.\n\nIn general guanacos will avoid crossing the highway.\nGuanacos will be more likely to cross the highway at night because there is less traffic and guanacos may exhibit diel shifts in proximity to humans.\nFemale guanacos will be less likely to cross the highway because they have chulengos (baby guanacos).\n\nTo further test these hypotheses and predictions, I examined whether differences in guanaco behavior between the highway and visitor roads are greater during the daytime, when vehicular traffic is higher, than at night, when traffic is lower.",
     "crumbs": [
       "Past Projects",
       "Senior Honors Thesis"
     ]
   },
   {
-    "objectID": "Website.html#example-guanaco-movement",
-    "href": "Website.html#example-guanaco-movement",
+    "objectID": "Website.html#study-area",
+    "href": "Website.html#study-area",
     "title": "The Effects of Highways on Guanaco Movement in Patagonia",
-    "section": "Example Guanaco Movement",
-    "text": "Example Guanaco Movement\n\n\n\nMLG06: Female, 113 kg\nTo analyze guanacos’ interaction with the barrier we used Barrier Behavior Analysis (BaBA) which is a spatial analysis package that classifies barrier interaction types and collects barrier crossing data.\nI found that 29.3% of highway crossing events were by male guanacos (p &lt; 0.05), indicating that females were more likely to cross. Additionally, 66.4% of highway crossings occurred during the summer months (p &lt; 0.05), and 64.7% occurred during daytime. These results contrast with my initial prediction that female guanacos would be less likely to cross the highway. One possible explanation is that females may travel in larger groups, increasing their likelihood of crossing, whereas males are more solitary and potentially less bold. Further investigation is needed to better understand these behavioral patterns.",
+    "section": "Study Area",
+    "text": "Study Area\nMonte León National Park (MLNP)\n\n61,000 ha along 30 km of coastline in the Patagonian Steppe\n\nBounded by Route 3 and the Atlantic Ocean\n\nHighway: two lane road that extends from Buenos Aires to the tip of Argentina, making it a major transportation route for the country with high volumes of traffic.\nVisitors Road: two lane road that takes tourists from the highway to the ocean through MLNP.\nPark Use Roads: a small dirt road system only used by park officials.\n\n\n\n\n\n\n\n\n\n\nExample Guanaco Movement",
     "crumbs": [
       "Past Projects",
       "Senior Honors Thesis"
     ]
   },
   {
-    "objectID": "Website.html#differences-in-road-crossings-by-road-type",
-    "href": "Website.html#differences-in-road-crossings-by-road-type",
+    "objectID": "Website.html#model",
+    "href": "Website.html#model",
     "title": "The Effects of Highways on Guanaco Movement in Patagonia",
-    "section": "Differences in Road Crossings by Road Type",
-    "text": "Differences in Road Crossings by Road Type\n\nSexTime of DaySeason\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote: Guanaco data spans from October 2019 through November 2021.\n\nTo test whether guanacos avoid crossing the highway due to traffic, we created two interaction variables combining the highway and visitor roads with a daytime dummy variable (0 = night, 1 = day). The coefficients on these interaction terms capture the additional impact of crossing busy roads, using daytime as a proxy for higher traffic. When these interactions are included, we find that guanacos are 7.4% ± 1.6% (p &lt; 0.05) and 7.7% ± 1.7% (p &lt; 0.05; see Appendix Table 2) less likely to cross the highway and visitor road, respectively, beyond the baseline likelihood of crossing during the day. This reduction is likely attributable to traffic-related avoidance or increased perceived risk. Notably, this model is the most explanatory, as it has the lowest AIC value among those tested.",
+    "section": "Model",
+    "text": "Model\nTo analyze guanacos’ interaction with the barrier I used Barrier Behavior Analysis (BaBA) which is a spatial analysis package that classifies barrier interaction types.\n\nI assumed that if the guanaco is using the habitat equally there will be a 50% chance it crosses an arbitrary barrier.\n\n\\(H_0: \\beta_{highway} = \\beta_{visitor} = \\beta_{park\\ roads} = 0.5\\)\n\\(H_A: \\beta_{highway} &lt; \\beta_{visitor} \\text{ and } \\beta_{highway} &lt; \\beta_{park\\ roads}\\)",
+    "crumbs": [
+      "Past Projects",
+      "Senior Honors Thesis"
+    ]
+  },
+  {
+    "objectID": "Website.html#results",
+    "href": "Website.html#results",
+    "title": "The Effects of Highways on Guanaco Movement in Patagonia",
+    "section": "Results",
+    "text": "Results\n\nExploratory Findings\n\n66.4% of highway crossings occurred during the summer months (p &lt; 0.05)\n64.7% of highway crossings occurred during daytime.\n29.3% of highway crossing events were by male guanacos (p &lt; 0.05), indicating that females were more likely to cross.\n\nThese results contrast with my initial prediction that female guanacos would be less likely to cross the highway. One possible explanation is that females may travel in larger groups, increasing their likelihood of crossing, whereas males are more solitary and potentially less bold. Further investigation is needed to better understand these behavioral patterns.\n\n\nFigure 1: Differences in Road Crossings\n\nSexTime of DaySeason\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote: Guanaco data collection occurred October 2019 through November 2021.\n\n\n\nAverage Movement\n\n\n\nMLG06: Average Movement, Female\n\n\nTrapped\n\n\n\nMLG08: Trapped, Female\n10 of the 4668 interactions were classified as “Quick Cross”, meaning that only 10 of the 116 highway crosses took place within 2 hours of being 80 meters from the highway.\n\n\nGuanaco Behavioral Responses\n\n\n\nSummary Statistics with Highway as Barrier\n\n\nInteraction Type\nNumber of Interactions\nShare of Interactions\nShare Leading to Cross\n\n\n\n\nAverage Movement\n971\n20.8%\n5.1%\n\n\nTrapped\n1,802\n38.6%\n0.4%\n\n\nBounce\n1,051\n22.5%\n0.0%\n\n\nQuick Cross\n10\n0.2%\n100.0%",
     "crumbs": [
       "Past Projects",
       "Senior Honors Thesis"
@@ -91,7 +102,7 @@
     "href": "Website.html#model-results",
     "title": "The Effects of Highways on Guanaco Movement in Patagonia",
     "section": "Model Results",
-    "text": "Model Results\n\nModel Comparison (AIC Values)\n\n\n\n\n\n\n\n\n\n\n\nRegression Table\n\n\n\n\n\nMy results indicated that paved roads significantly affect guanaco movement, with vehicular traffic being a major contributing factor. However, other factors may also influence highway avoidance, including differences in vegetation and habitat on either side of the road, as well as fear of poaching, since private land borders the highway. Future research should investigate these alternative hypotheses and the potential role of fencing. From a conservation perspective, these findings highlight that roadways can fragment guanaco habitat. When planning new national parks or conservation areas, park managers should consider connectivity across roads. Strategies such as wildlife crossing structures could help mitigate the negative effects of traffic and maintain mobility for guanaco populations.",
+    "text": "Model Results\nTo test whether guanacos avoid crossing the highway due to traffic, I created two interaction variables combining the highway and visitor roads with a daytime binary variable. The coefficients on these interaction terms capture the additional impact of crossing busy roads, using daytime as a proxy for higher traffic.\nWhen these interactions are included, we find that guanacos are 7.4% ± 1.6% (p &lt; 0.05) and 7.7% ± 1.7% (p &lt; 0.05; see Appendix Table 2) less likely to cross the highway and visitor road, respectively, beyond the baseline likelihood of crossing during the day. This reduction is likely attributable to traffic-related avoidance or increased perceived risk. Notably, this model is the most explanatory, as it has the lowest AIC value among those tested.\n\nModel Comparison (AIC Values)\n\n\n\n\n\n\n\n\n\nMy results indicated that paved roads significantly affect guanaco movement, with vehicular traffic being a major contributing factor. However, other factors may also influence highway avoidance, including differences in vegetation and habitat on either side of the road, as well as fear of poaching, since private land borders the highway. Future research should investigate these alternative hypotheses and the potential role of fencing.\n\n\nRegression Table\n\n\nFrom a conservation perspective, these findings highlight that roadways can fragment guanaco habitat. When planning new national parks or conservation areas, park managers should consider connectivity across roads. Strategies such as wildlife crossing structures could help mitigate the negative effects of traffic and maintain mobility for guanaco populations.",
     "crumbs": [
       "Past Projects",
       "Senior Honors Thesis"
@@ -102,7 +113,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "I am quantitative researcher interested in economic and environmental policy, urban planning, and wildlife human interactions.\n\n\n\n\nMt. Rainier over Seattle from the Kingston-Edmonds ferry.\n\n\n\nI graduated from UC Berkeley in 2022 with a double major in Environmental Economics & Policy and Conservation & Resource Studies along with a minor in Data Science. I worked with the Middleton Lab on my senior honors thesis - using GPS collar data to study guanacos interactions with roadways in Patagonia.\nSince graduating from Berkeley, I worked for 2 years as an RA at The Brattle Group, a litigation consulting firm.\nCurrently, I work as an Senior RA at ECO Northwest on the Data Analytics team in the Seattle office.",
+    "text": "I am quantitative researcher interested in economic and environmental policy, urban planning, and wildlife human interactions.\n\n\n\n\nMt. Rainier over Seattle from the Kingston-Edmonds ferry.\n\n\n\nI graduated from UC Berkeley in 2022 with a double major in Environmental Economics & Policy and Conservation & Resource Studies along with a minor in Data Science. I worked with the Middleton Lab on my senior honors thesis - using GPS collar data to study guanacos interactions with roadways in Patagonia.\nSince graduating from Berkeley, I worked for 2 years as an Research Analyst at The Brattle Group, a litigation consulting firm.\nCurrently, I work as an Senior Research Analyst at ECO Northwest on the Data Analytics team in the Seattle office.",
     "crumbs": [
       "Home"
     ]

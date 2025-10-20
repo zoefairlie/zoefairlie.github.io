@@ -267,19 +267,37 @@ img.grid-item:hover {
 <p><a href="./www/beaverswimming.JPG" class="lightbox" data-gallery="quarto-grid-gallery"><img src="./www/beaverswimming.JPG" class="grid-item img-fluid" loading="lazy"></a></p>
 </div>
 <div>
+<p><a href="./www/colchuck.JPG" class="lightbox" data-gallery="quarto-grid-gallery"><img src="./www/colchuck.JPG" class="grid-item img-fluid" loading="lazy"></a></p>
+</div>
+<div>
+<p><a href="./www/desolation.JPG" class="lightbox" data-gallery="quarto-grid-gallery"><img src="./www/desolation.JPG" class="grid-item img-fluid" loading="lazy"></a></p>
+</div>
+<div>
+<p><a href="./www/enchantments.JPG" class="lightbox" data-gallery="quarto-grid-gallery"><img src="./www/enchantments.JPG" class="grid-item img-fluid" loading="lazy"></a></p>
+</div>
+<div>
+<p><a href="./www/herm.JPG" class="lightbox" data-gallery="quarto-grid-gallery"><img src="./www/herm.JPG" class="grid-item img-fluid" loading="lazy"></a></p>
+</div>
+<div>
 <p><a href="./www/howlermonkey.JPG" class="lightbox" data-gallery="quarto-grid-gallery"><img src="./www/howlermonkey.JPG" class="grid-item img-fluid" loading="lazy"></a></p>
 </div>
 <div>
 <p><a href="./www/hummingbird.JPG" class="lightbox" data-gallery="quarto-grid-gallery"><img src="./www/hummingbird.JPG" class="grid-item img-fluid" loading="lazy"></a></p>
 </div>
 <div>
-<p><a href="./www/mtrainer_narrow.JPG" class="lightbox" data-gallery="quarto-grid-gallery"><img src="./www/mtrainer_narrow.JPG" class="grid-item img-fluid" loading="lazy"></a></p>
-</div>
-<div>
 <p><a href="./www/pnwbeach.JPG" class="lightbox" data-gallery="quarto-grid-gallery"><img src="./www/pnwbeach.JPG" class="grid-item img-fluid" loading="lazy"></a></p>
 </div>
 <div>
+<p><a href="./www/redwoods.JPG" class="lightbox" data-gallery="quarto-grid-gallery"><img src="./www/redwoods.JPG" class="grid-item img-fluid" loading="lazy"></a></p>
+</div>
+<div>
+<p><a href="./www/shawl_nudi.JPG" class="lightbox" data-gallery="quarto-grid-gallery"><img src="./www/shawl_nudi.JPG" class="grid-item img-fluid" loading="lazy"></a></p>
+</div>
+<div>
 <p><a href="./www/sloth.JPG" class="lightbox" data-gallery="quarto-grid-gallery"><img src="./www/sloth.JPG" class="grid-item img-fluid" loading="lazy"></a></p>
+</div>
+<div>
+<p><a href="./www/sol_duc.JPG" class="lightbox" data-gallery="quarto-grid-gallery"><img src="./www/sol_duc.JPG" class="grid-item img-fluid" loading="lazy"></a></p>
 </div>
 <div>
 <p><a href="./www/spidermonkey1.JPG" class="lightbox" data-gallery="quarto-grid-gallery"><img src="./www/spidermonkey1.JPG" class="grid-item img-fluid" loading="lazy"></a></p>
@@ -368,7 +386,7 @@ img.grid-item:hover {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/zoefairlie\.github\.io\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

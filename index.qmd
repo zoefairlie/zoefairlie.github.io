@@ -16,15 +16,15 @@ self-contained: true
 I am quantitative researcher interested in economic and environmental policy, urban planning, and wildlife human interactions.
 :::
 
-![Mt. Rainier over Seattle from the Kingston-Edmonds ferry.](www/mtrainer_narrow.JPG){width=100%}
+![Mt. Rainier over Seattle from the Kingston-Edmonds ferry.](www/mtrainer_narrow.JPEG){width=100%}
 
 
 ::: {.left-align}
 I graduated from UC Berkeley in 2022 with a double major in Environmental Economics & Policy and Conservation & Resource Studies along with a minor in Data Science. I worked with the Middleton Lab on my senior honors thesis - using GPS collar data to study guanacos interactions with roadways in Patagonia. 
 
-Since graduating from Berkeley, I worked for 2 years as an RA at The Brattle Group, a litigation consulting firm. 
+Since graduating from Berkeley, I worked for 2 years as an Research Analyst at The Brattle Group, a litigation consulting firm. 
 
-Currently, I work as an Senior RA at ECO Northwest on the Data Analytics team in the Seattle office.
+Currently, I work as an Senior Research Analyst at ECO Northwest on the Data Analytics team in the Seattle office.
 :::
 
 
