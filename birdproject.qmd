@@ -10,11 +10,10 @@ self-contained: true
 <!-- Embed the PDF full-width using <iframe> -->
 
 <iframe 
-  src="www/Zoe_Fairlie_SPUR_Presentation.pdf" 
+  src="www/Zoe_Fairlie_SPUR_Presentation.pdf"
   width="100%" 
   height="1000px" 
   style="border: none;" 
   title="SPUR Presentation">
-
 </iframe>
 :::

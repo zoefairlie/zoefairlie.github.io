@@ -87,11 +87,14 @@ park_outline <- st_read("/Users/zoefairlie/Desktop/Thesis/shapefiles_monteleon/p
 ```
 ## Introduction
 
-Habitat connectivity is vital for ungulates, enabling access to key resources and maintaining gene flow among populations.
-Expanding linear infastructure such as roads fragment their habitats and restrict movement.
-Guanacos, South America’s most widespread native ungulate, have declined drastically and remain understudied regarding roadway impacts in the Patagonian steppe. 
-This study uses GPS data from Monte León National Park, Argentina, to examine how guanaco movement responds to a major highway.
-
+Animal movement is integral for the transportation of nutrients, plant productivity, and other
+ecosystem functions. Anthropogenic disturbances such as urban developments and energy
+production greatly affect animals’ daily movements, migration patterns, and access to necessary
+resources. As human populations grow, it is important to analyze and identify how barriers, such
+as roads, will affect animal movements. There is a great deal of variation on wildlife response to
+roads and ungulates are some of the more affected species. While there has been considerable
+research about the impacts of roads on ungulates throughout North America and Europe, there
+has been comparatively little research how roads impact South American wildlife.
 
 ## Research Questions
 
@@ -104,17 +107,17 @@ To analyze the effects of traffic, I compared guanaco interactions with the main
 
 I hypothesize that guanaco movement will be impacted by the highway and that guanancos will avoid crossing roads with high traffic.
 
-- In general guanacos will avoid crossing the highway.
-- Guanacos will be more likely to cross the highway at night because there is less traffic and guanacos may exhibit diel shifts in proximity to humans.
-- Female guanacos will be less likely to cross the highway because they have chulengos (baby guanacos).
+- Guanacos will be more likely to cross the highway at night because there is less traffic.
 
+- Female guanacos will be less likely to cross the highway because they have chulengos (baby guanacos).
 
 To further test these hypotheses and predictions, I examined whether differences in guanaco behavior between the highway and visitor roads are greater during the daytime, when vehicular traffic is higher, than at night, when traffic is lower.
 
 ## Study Area
 Monte León National Park (MLNP)
 
-- 61,000 ha along 30 km of coastline in the Patagonian Steppe  
+- 61,000 ha along 30 km of coastline in the Patagonian Steppe
+
 - Bounded by Route 3 and the Atlantic Ocean 
 
 Highway: two lane road that extends from Buenos Aires to the tip of Argentina, making it a major transportation route for the country with high volumes of traffic.
@@ -221,8 +224,6 @@ final_plot
 
 ```
 
-
-### Example Guanaco Movement
 
 ```{r, message= F, warning=F, echo=F}
 #| message: false
@@ -497,6 +498,8 @@ plot_ly(data = season_figure ,
 Note: Guanaco data collection occurred October 2019 through November 2021.
 :::
 
+## Example Guanaco Movement
+
 ### Average Movement
 
 <video width="720" height="480" controls>
@@ -535,9 +538,9 @@ kable(summary_highway,
 To test whether guanacos avoid crossing the highway due to traffic, I created two interaction variables combining the highway and visitor roads with a daytime binary variable. 
 The coefficients on these interaction terms capture the additional impact of crossing busy roads, using daytime as a proxy for higher traffic. 
 
-When these interactions are included, we find that guanacos are 7.4% ± 1.6% (p < 0.05) and 7.7% ± 1.7% (p < 0.05; see Appendix Table 2) less likely to cross the highway and visitor road, respectively, beyond the baseline likelihood of crossing during the day. 
+When these interactions are included, we find that guanacos are 7.4% and 7.7% less likely to cross the highway and visitor road, respectively, beyond the baseline likelihood of crossing during the day. 
 This reduction is likely attributable to traffic-related avoidance or increased perceived risk.
- Notably, this model is the most explanatory, as it has the lowest AIC value among those tested.
+Notably, this model is the most explanatory, as it has the lowest AIC value among those tested.
 
 
 ### Model Comparison (AIC Values)
@@ -569,7 +572,7 @@ knitr::include_graphics("www/aic_cropped.jpg")
 ```
 
 My results indicated that paved roads significantly affect guanaco movement, with vehicular traffic being a major contributing factor.
- However, other factors may also influence highway avoidance, including differences in vegetation and habitat on either side of the road, as well as fear of poaching, since private land borders the highway. 
+However, other factors may also influence highway avoidance, including differences in vegetation and habitat on either side of the road, as well as fear of poaching, since private land borders the highway. 
 Future research should investigate these alternative hypotheses and the potential role of fencing.
 
 
@@ -578,5 +581,23 @@ Future research should investigate these alternative hypotheses and the potentia
 <iframe src="www/regint.html" width="100%" height="670px" style="border: none;" title="Regression Table"></iframe>
 
 
-From a conservation perspective, these findings highlight that roadways can fragment guanaco habitat. When planning new national parks or conservation areas, park managers should consider connectivity across roads. 
-Strategies such as wildlife crossing structures could help mitigate the negative effects of traffic and maintain mobility for guanaco populations.
+This study builds on the idea that roads affect guanacos use of space negatively by
+finding a mechanistic answer: guanacos fear traffic.
+I can conclude that guanacos do not exhibit fear from being close to roads, but the road acts as
+a barrier for crossing. 
+
+This has huge conservation implications since roads may lead to spatial
+segregation and isolation of guanaco populations. In North America and Europe, we have seen
+the creation of wildlife tunnels and bridges for animals crossing major roads, and this could be a
+potential mitigation technique in South America. Strategies such as these allow for increased
+permeability of an otherwise uncrossable barrier.
+
+The Patagonian steppe is considered a high priority location for global conservation due to
+habitat fragmentation. There are currently lots of efforts to restore guanaco habitat.
+Organizations such as Tompkins Conservation (also known as Rewilding Patagonia) have been
+taking actions, such as buying and setting aside conservation tracts, to help protect habitat and
+species, since much of the area has become farmland. Another strategy for guanaco conservation
+is reintroducing guanacos throughout Argentina. When deciding locations of
+conservation tracts or where to release guanacos it is important to consider their mobility. All
+these conservation approaches will require huge investments so it is crucial to assess if roads in
+the area will limit guanacos’ ability to move between parks or conservation tracts.
