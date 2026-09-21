@@ -500,23 +500,6 @@ plot_ly(data = season_figure ,
 Note: Guanaco data collection occurred October 2019 through November 2021.
 :::
 
-## Example Guanaco Movement
-
-### Average Movement
-
-<video width="720" height="480" controls>
-  <source src="www/guanaco_animate.mp4" type="video/mp4">
-</video>
-
-MLG06: Average Movement, Female
-
-### Trapped
-
-<video width="720" height="480" controls>
-  <source src="www/guanaco_animate_trapped.mp4" type="video/mp4">
-</video>
-
-MLG08: Trapped, Female
 
 10 of the 4668 interactions were classified as “Quick Cross”, meaning that only 10 of the 116 highway crosses took place within 2 hours of being 80 meters
 from the highway. 
