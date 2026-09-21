@@ -19,8 +19,6 @@ website:
         contents:
           - href: Website.qmd
             text: "Senior Honors Thesis"
-          - href: birdproject.qmd
-            text: "SPUR Grant Research Project"
       - href: Pictures.qmd
         text: "Pictures"
 format:

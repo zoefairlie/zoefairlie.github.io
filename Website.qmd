@@ -31,9 +31,9 @@ library(kableExtra)
 
 mapviewOptions(fgb = FALSE)
 
-g_park_roads <- read_csv("/Users/zoefairlie/Desktop/Thesis/g_park_roads.csv")
-g_visitors <- read_csv("/Users/zoefairlie/Desktop/Thesis/g_visitors.csv")
-g_highway <- read_csv("/Users/zoefairlie/Desktop/Thesis/g_highway.csv")
+g_park_roads <- read_csv("~/Desktop/Thesis/g_park_roads.csv")
+g_visitors <- read_csv("~/Desktop/Thesis/g_visitors.csv")
+g_highway <- read_csv("~/Desktop/Thesis/g_highway.csv")
 
 
 highway_cross_table <- g_highway %>% mutate(sex = case_when(female == 1 ~ 'Female',
@@ -65,10 +65,10 @@ park_cross_table <- g_park_roads %>% mutate(sex = case_when(female == 1 ~ 'Femal
 
 color_pal <- c('#fedc56','#ff9e4d', '#d95d67', '#c5488c') 
 
-rutas <- st_read("/Users/zoefairlie/Desktop/Thesis/rutas_all_roads.shp", quiet = TRUE)
-highway <- st_read("/Users/zoefairlie/Desktop/Thesis/highway.shp", quiet = TRUE)
-tourist <- st_read("/Users/zoefairlie/Desktop/Thesis/caminos2.shp", quiet = TRUE)
-park_roads <-st_read("/Users/zoefairlie/Desktop/Thesis/park_roads.shp", quiet = TRUE)
+rutas <- st_read("~/Desktop/Thesis/rutas_all_roads.shp", quiet = TRUE)
+highway <- st_read("~/Desktop/Thesis/highway.shp", quiet = TRUE)
+tourist <- st_read("~/Desktop/Thesis/caminos2.shp", quiet = TRUE)
+park_roads <-st_read("~/Desktop/Thesis/park_roads.shp", quiet = TRUE)
 
 tourist <- st_transform(tourist, st_crs(highway))
 park_roads <- st_transform(park_roads, st_crs(highway))
@@ -81,7 +81,7 @@ road_data = highway %>% mutate(type = 'Highway') %>% select(type) %>%
   group_by(type) %>%
   summarise(geometry = st_union(geometry))
 
-park_outline <- st_read("/Users/zoefairlie/Desktop/Thesis/shapefiles_monteleon/pn_monteleon.shp", quiet = TRUE) %>%
+park_outline <- st_read("~/Desktop/Thesis/shapefiles_monteleon/pn_monteleon.shp", quiet = TRUE) %>%
   st_transform(st_crs(highway))
 
 ```
@@ -232,8 +232,8 @@ final_plot
 #| warning: false
 #| echo: false
 
-# shape <- st_read("/Users/zoefairlie/Desktop/Thesis/shapefiles_monteleon/catastro_stacruz.shp", quiet = TRUE)
-# shape_2 <- st_read("/Users/zoefairlie/Desktop/Thesis/shapefiles_monteleon/pn_monteleon.shp", quiet = TRUE)
+# shape <- st_read("~/Desktop/Thesis/shapefiles_monteleon/catastro_stacruz.shp", quiet = TRUE)
+# shape_2 <- st_read("~/Desktop/Thesis/shapefiles_monteleon/pn_monteleon.shp", quiet = TRUE)
 # 
 # g_highway_sf <- g_highway %>% 
 #   st_as_sf(coords = c("easting", "northing"), crs = st_crs(highway))
@@ -242,7 +242,7 @@ final_plot
 # g_park_roads_sf <- g_park_roads %>% 
 #   st_as_sf(coords = c("easting", "northing"), crs = st_crs(highway))
 # 
-# guanacos <- read.csv('/Users/zoefairlie/Desktop/Thesis/Thesis Presentation/raw_guanaco_data.csv')
+# guanacos <- read.csv('~/Desktop/Thesis/Thesis Presentation/raw_guanaco_data.csv')
 # 
 # test_cross <- g_highway %>% filter(AnimalID == 6 & cross == 1) %>%
 #   mutate(date = as.POSIXct(start_time))
@@ -351,7 +351,7 @@ final_plot
 #   width = 800, height = 600, res = 100,
 #   nframes = nrow(test), renderer = av_renderer())
 # 
-# anim_save(filename = '/Users/zoefairlie/Desktop/Website/www/guanaco_animate.mp4', animation = animation_g) 
+# anim_save(filename = '~/Desktop/Website/www/guanaco_animate.mp4', animation = animation_g) 
 
 ```
 
@@ -506,7 +506,7 @@ from the highway.
 ### Guanaco Behavioral Responses
 
 ```{r, message= F, warning=F, echo=F}
-summary_highway <- read_csv("/Users/zoefairlie/Desktop/Thesis/highway_interaction_table.csv") %>%
+summary_highway <- read_csv("~/Desktop/Thesis/highway_interaction_table.csv") %>%
   mutate(`Number of Interactions` = comma(`Number of Interactions`, accuracy = 1))
 
 kable(summary_highway, 
