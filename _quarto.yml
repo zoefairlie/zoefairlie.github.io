@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - google02da4d596b6bb338.html
   output-dir: "docs"
 website:
   title: "Zoe Fairlie"
