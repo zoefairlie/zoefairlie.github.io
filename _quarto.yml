@@ -3,6 +3,8 @@ project:
   output-dir: "docs"
 website:
   title: "Zoe Fairlie"
+  site-url: https://zoefairlie.github.io
+  description: "Zoe Fairlie is a quantitative researcher and PhD student studying the effects of human activities on wildlife."
   page-footer: "© 2025 Zoe Fairlie"
   navbar:
     background: "#F5FFFA"
